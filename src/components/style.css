@@ -1,0 +1,23 @@
+h1 {
+    font-size: calc(16px + 2vmin);
+  }
+  
+  h2 {
+    font-size: calc(10px + 2vmin);
+  }
+  
+  .App {
+    padding: 2em 3em;
+    min-height: 100vh;
+    background-color: #282c34;
+    font-size: calc(8px + 2vmin);
+    color: white;
+  }
+  
+  .App-header {
+  
+  }
+  
+  .App-body {
+    
+  }
