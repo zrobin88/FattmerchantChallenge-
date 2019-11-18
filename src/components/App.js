@@ -3,8 +3,8 @@ import axios from 'axios'
 import './style.css'
 
 
-const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXJjaGFudCI6IjZkMzI5Nzk3LWI2NGQtNDdkMS1hNDU3LTQ3OThlMmIzNjFiNSIsImdvZFVzZXIiOmZhbHNlLCJzdWIiOiI0ODI3ODAzNi1jYzE5LTQ3YWItYTgyOC03MzRiOWUxYWNlMDIiLCJpc3MiOiJodHRwOi8vYXBpZGVtby5mYXR0bGFicy5jb20vdGVhbS9hcGlrZXkiLCJpYXQiOjE1NTU0Mjg2MzMsImV4cCI6NDcwOTAyODYzMywibmJmIjoxNTU1NDI4NjMzLCJqdGkiOiJxZTNueklKdWlDOFhKN1dhIiwiYXNzdW1pbmciOmZhbHNlfQ.TEmlwmgVBLwt5x0FO4c-mbY3JgO_tgxcFRfznlOGSrM'
-// const token = process.env.FATTMERCHANT_TOKEN
+
+const token = process.env.FATTMERCHANT_TOKEN
 
 class App extends Component {
 
@@ -119,7 +119,7 @@ class App extends Component {
                     <h1 className="text-dark mx-auto">Invoice</h1>
                 </nav>
               
-                <div className="App-body">
+                <div>
                     <h2>Choose Items:</h2>
 
                     <button onClick={this.getItems} className='btn btn-success'>Search Items</button>
@@ -127,12 +127,12 @@ class App extends Component {
 
                 </div>
 
-                <div className="App-body">
+                <div>
                     <h2>Enter Memo:</h2>
                     <input type='text' value={this.state.memo} onChange={this.onInputChange} className='memo'></input>
 
                 </div>
-                <div className="App-body jumbotron text-dark mt-5">
+                <div className="jumbotron text-dark mt-5">
                     <h2>Your Selected Items:</h2>
                     <p>  {this.state.pickedItems.itemName}</p>
                 </div>
@@ -142,13 +142,9 @@ class App extends Component {
                 </div>
 
 
-                <div className="App-body">
+                <div>
                     <button className='btn btn-success' onClick={this.saveInvoice}>Save Invoice</button>
-                    {/*
-          button or some way to save the invoice
-          this will call the api to POST invoice with the correct data
-          https://fattmerchant.docs.apiary.io/#reference/0/invoices/create-an-invoice
-        */}
+       
                 </div>
 
             </div>
